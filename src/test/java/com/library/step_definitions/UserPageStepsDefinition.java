@@ -1,5 +1,6 @@
 package com.library.step_definitions;
 
+import com.github.javafaker.Faker;
 import com.library.pages.HomePage;
 import com.library.pages.LoginPage;
 import com.library.pages.UserPage;
@@ -36,22 +37,20 @@ public class UserPageStepsDefinition {
 
     @And("user fills fields with information below")
     public void userFillsFieldsWithInformationBelow(Map<String,String>information) {
-        userPage.fullNameField.sendKeys(information.get("FullName"));
+        userPage.fullNameField.sendKeys(new Faker().harryPotter().character());
         userPage.passwordField.sendKeys(information.get("Password"));
-        userPage.emailField.sendKeys(information.get("Email"));
+        userPage.emailField.sendKeys(emailInfo=new Faker().internet().emailAddress());
         userPage.userGroupField.sendKeys(information.get("UserGroup"));
         userPage.statusField.sendKeys(information.get("Status"));
         userPage.startDateField.sendKeys(information.get("StartDate"));
         userPage.endDateField.sendKeys(information.get("EndDate"));
         userPage.endDateField.sendKeys(information.get("Address"));
-        emailInfo = information.get("Email");
     }
 
     @And("user clicks on save changes button")
     public void userClicksOnSaveChangesButton() {
         userPage.saveChangesButton.click();
     }
-
     @Then("new user should be created")
     public void newUserShouldBeCreated() throws InterruptedException {
         BrowserUtils.sleep(2);

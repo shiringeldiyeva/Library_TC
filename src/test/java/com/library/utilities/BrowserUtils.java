@@ -1,7 +1,7 @@
 package com.library.utilities;
 
 public class BrowserUtils {
-    public static void sleep(int second) throws InterruptedException {
+    public static void sleep(int second){
         second*=1000;
         try{
             Thread.sleep(second);

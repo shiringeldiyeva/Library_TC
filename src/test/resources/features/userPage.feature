@@ -7,9 +7,9 @@ Feature: User page
   Scenario:  add users with all valid info
     When user clicks on add user button
     And user fills fields with information below
-      | FullName  | Mike Edison                |
+      | FullName  | Mike Enigma                |
       | Password  | 147856                     |
-      | Email     | mike788@gmail.com          |
+      | Email     | miken788@gmail.com         |
       | UserGroup | Student                    |
       | Status    | ACTIVE                     |
       | StartDate | 2021-02-27                 |
