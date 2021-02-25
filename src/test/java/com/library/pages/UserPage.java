@@ -52,5 +52,7 @@ public class UserPage {
     @FindBy(xpath = "(//*[text()=' Edit User'])[1]")
     public WebElement editUserButton;
 
+    @FindBy(id = "user_groups")
+    public WebElement userGroups;
 
 }
