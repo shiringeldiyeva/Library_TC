@@ -24,4 +24,11 @@ public class HomePage {
     public List<WebElement> menuItems;
 
 
+    @FindBy(css = "tr>th")
+    public List<WebElement>columnNames;
+
+    @FindBy(id = "book_categories")
+    public WebElement booksCategories;
+
+
 }
