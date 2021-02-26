@@ -55,4 +55,7 @@ public class UserPage {
     @FindBy(id = "user_groups")
     public WebElement userGroups;
 
+    @FindBy(id = "user_status")
+    public WebElement userStatus;
+
 }
